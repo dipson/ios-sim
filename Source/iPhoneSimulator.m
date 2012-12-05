@@ -14,6 +14,7 @@
 NSString *simulatorPrefrencesName = @"com.apple.iphonesimulator";
 NSString *deviceProperty = @"SimulateDevice";
 NSString *deviceIphoneRetina = @"iPhone (Retina 3.5-inch)";
+NSString *deviceIphoneTallRetina = @"iPhone (Retina 4-inch)";
 NSString *deviceIphone = @"iPhone";
 NSString *deviceIpad = @"iPad";
 NSString *deviceIpadRetina = @"iPad (Retina)";
@@ -250,6 +251,9 @@ NSString *deviceIpadRetina = @"iPad (Retina)";
     }
     if ([family isEqualToString:@"ipad"]) {
       devicePropertyValue = deviceIpadRetina;
+    }
+    else if ([family isEqualToString: @"iphone-tall"]) {
+      devicePropertyValue = deviceIphoneTallRetina;
     }
     else {
       devicePropertyValue = deviceIphoneRetina;
